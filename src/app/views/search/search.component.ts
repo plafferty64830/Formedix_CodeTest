@@ -40,7 +40,7 @@ export class SearchComponent implements OnInit {
   /* ngOnInit runs when the component loads */
   ngOnInit(): void {
     /* if there is no 'search' query parameter search for for 'formedix' so there are some images displayed on load */
-    if(this.urlParams.get('search') === ""){
+    if(this.urlParams.get('search') === "" || this.urlParams.get('search') === null || this.urlParams.get('search') === undefined){
       this.searchImg('formedix');
     }else{
       this.searchImg(this.urlParams.get('search'));
